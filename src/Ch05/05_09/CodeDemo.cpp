@@ -15,7 +15,21 @@ struct Resource{
 double CalculateTotalCost(std::vector<Resource> resources){
     double result = 0.0;
     
-    // Write your code here
+    for (auto r : resources) {
+        double current = r.baseCost;
+        switch (r.type) {
+            case 'B':
+                current *= 1.05;
+                break;
+            case 'L':
+                current *= 1.15;
+                break;
+            default :
+                current = current;
+        }
+
+        result += current;
+    }
     
     return result;
 }
