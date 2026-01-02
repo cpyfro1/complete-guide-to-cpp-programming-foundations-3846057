@@ -8,7 +8,8 @@
 double my_average(int a, int8_t b, uint32_t c){
     double result = 0.0;
 
-    // Write your code here
+    result = (double) a + b + c;
+    result /= 3.0;
     
     return result;
 }
